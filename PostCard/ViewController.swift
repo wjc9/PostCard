@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var enterName: UITextField!
     @IBOutlet weak var enterMessage: UITextField!
     @IBOutlet weak var mailButton: UIButton!
+    @IBOutlet weak var nameLable: UILabel!
     
     
     
@@ -32,9 +33,22 @@ class ViewController: UIViewController {
 
     @IBAction func sendMailButtonPressed(sender: UIButton) {
         messageLabel.hidden = false
+        nameLable.hidden = false
         messageLabel.text = enterMessage.text
-        messageLabel.textColor = UIColor.redColor();
+        nameLable.text = enterName.text
+        messageLabel.textColor = UIColor.redColor()
+        nameLable.textColor = UIColor.blueColor()
+        nameLable.backgroundColor = UIColor.brownColor()
         
+        /*
+        Unhide the nameLabel.
+        
+        * Update the nameLabel's text to display the information in the nameTextField.
+        
+        * Change the nameLabel's textColor to blue.
+        
+        * Clear the nameTextField's text.
+        */
         
         enterMessage.text = ""
         enterName.text = ""
